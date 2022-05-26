@@ -35,10 +35,21 @@
             color: #428ed1;
         }
 
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .boxes {
+            display: flex;
+        }
+
         .gridbox1 {
             display: grid;
-            grid-template-columns: auto;
-            overflow-x: scroll;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 200px;
+            overflow-x: auto;
+            cursor: pointer;
         }
 
         .gridbox1 p {
@@ -55,22 +66,31 @@
 <body>
     <div class="gridbox1">
         <div style="background-color: #be2d2d;">
-            <p class="grid" id="code0" onclick="copyToClipboard(0)">#be2d2d</p>
+            <p id="code0" onclick="copyToClipboard(0)">#be2d2d</p>
         </div>
         <div style="background-color: #c59940;">
-            <p class="grid" id="code1" onclick="copyToClipboard(1)">#c59940</p>
+            <p id="code1" onclick="copyToClipboard(1)">#c59940</p>
         </div>
         <div style="background-color: #babf31;">
-            <p class="grid" id="code2" onclick="copyToClipboard(2)">#babf31</p>
+            <p id="code2" onclick="copyToClipboard(2)">#babf31</p>
         </div>
         <div style="background-color: #60bf31;">
-            <p class="grid" id="code3" onclick="copyToClipboard(3)">#60bf31</p>
+            <p id="code3" onclick="copyToClipboard(3)">#60bf31</p>
         </div>
         <div style="background-color: #31bf90;">
-            <p class="grid" id="code4" onclick="copyToClipboard(4)">#31bf90</p>
+            <p id="code4" onclick="copyToClipboard(4)">#31bf90</p>
         </div>
         <div style="background-color: #31a7bf;">
-            <p class="grid" id="code5" onclick="copyToClipboard(5)">#31a7bf</p>
+            <p id="code5" onclick="copyToClipboard(5)">#31a7bf</p>
+        </div>
+        <div style="background-color: #315cbf;">
+            <p id="code6" onclick="copyToClipboard(6)">#315cbf</p>
+        </div>
+        <div style="background-color: #7c4dbe;">
+            <p id="code7" onclick="copyToClipboard(7)">#7c4dbe</p>
+        </div>
+        <div style="background-color: #9f43be;">
+            <p id="code8" onclick="copyToClipboard(8)">#9f43be</p>
         </div>
     </div>
 </body>
