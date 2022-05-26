@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--外部スタイルシート-->
+    <!--  
+    <link rel="stylesheet" href="style.css">
+    -->
+    <!--内部スタイルシート-->
+
+    <style type="text/css">
+        header {
+            background-color: #b4b4b4;
+            color: white;
+            padding: 20px 50px;
+            font-size: 50px;
+        }
+
+        footer {
+            background-color: #b4b4b4;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            height: 100%;
+            min-height: 1vh;
+            position: relative;
+            padding-bottom: 20px;
+            box-sizing: border-box;
+
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            color: #428ed1;
+        }
+
+        .gridbox1 {
+            display: grid;
+            grid-template-columns: auto;
+            overflow-x: scroll;
+        }
+
+        .gridbox1 p {
+            padding: 10px 10px;
+            margin: 5px 5px;
+        }
+    </style>
+
+</head>
+<header>
+    ColorChart
+</header>
+
+<body>
+    <div class="gridbox1">
+        <div style="background-color: #be2d2d;">
+            <p class="grid" id="code0" onclick="copyToClipboard(0)">#be2d2d</p>
+        </div>
+        <div style="background-color: #c59940;">
+            <p class="grid" id="code1" onclick="copyToClipboard(1)">#c59940</p>
+        </div>
+        <div style="background-color: #babf31;">
+            <p class="grid" id="code2" onclick="copyToClipboard(2)">#babf31</p>
+        </div>
+        <div style="background-color: #60bf31;">
+            <p class="grid" id="code3" onclick="copyToClipboard(3)">#60bf31</p>
+        </div>
+        <div style="background-color: #31bf90;">
+            <p class="grid" id="code4" onclick="copyToClipboard(4)">#31bf90</p>
+        </div>
+        <div style="background-color: #31a7bf;">
+            <p class="grid" id="code5" onclick="copyToClipboard(5)">#31a7bf</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    function copyToClipboard(index) {
+        var text = document.getElementById("code" + index).innerText;
+        navigator.clipboard.writeText(text);
+    }
+</script>
+
+<footer>
+    <p> Copyright</p>
+</footer>
+
+</html>
