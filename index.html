@@ -11,9 +11,13 @@
     <style type="text/css">
         header {
             background-color: #b4b4b4;
-            color: white;
-            padding: 20px 50px;
-            font-size: 50px;
+            padding: 1mm 10mm;
+            font-size: 100%;
+            margin: 0;
+        }
+
+        body {
+            margin-top: 0px;
         }
 
         footer {
@@ -27,40 +31,71 @@
             position: relative;
             padding-bottom: 20px;
             box-sizing: border-box;
+        }
 
+        footer a {
+            margin: auto 10px;
+            text-decoration: none;
+            color: white;
         }
 
         h1 {
             font-family: 'Courier New', Courier, monospace;
-            color: #428ed1;
-        }
-
-        .box {
-            width: 100px;
-            height: 100px;
-        }
-
-        .boxes {
-            display: flex;
         }
 
         .gridbox1 {
+            padding-top: 5em;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-auto-rows: 200px;
             overflow-x: auto;
-            cursor: pointer;
         }
 
         .gridbox1 p {
             padding: 10px 10px;
             margin: 5px 5px;
+            cursor: pointer;
+            font-size: 200%;
+            font-weight: bolder;
+            color: white;
+            text-shadow: 1px 1px 0 #000, -1px -1px 0 #000,
+                -1px 1px 0 #000, 1px -1px 0 #000,
+                0px 1px 0 #000, 0-1px 0 #000,
+                -1px 0 0 #000, 1px 0 0 #000;
+        }
+
+        span {
+            color: #1099b4;
+        }
+
+        .site-header {
+            background: #fff;
+            display: flex;
+            padding: 0px 20px;
+            position: fixed;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        /*
+        @media (max-width: 1000px) {
+            .gridbox1 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        */
+        @media screen and (max-width:640px) {
+
+            .gridbox1 {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
     </style>
-
 </head>
-<header>
-    ColorChart
+<header class="site-header">
+    <div>
+        <h2><span>C</span>olorChart</h2>
+    </div>
 </header>
 
 <body>
@@ -92,6 +127,15 @@
         <div style="background-color: #9f43be;">
             <p id="code8" onclick="copyToClipboard(8)">#9f43be</p>
         </div>
+        <div style="background-color: #be438b;">
+            <p id="code8" onclick="copyToClipboard(9)">#be438b</p>
+        </div>
+        <div style="background-color: #be4353;">
+            <p id="code8" onclick="copyToClipboard(10)">#be4353</p>
+        </div>
+        <div style="background-color: #be4343;">
+            <p id="code8" onclick="copyToClipboard(10)">#be4353</p>
+        </div>
     </div>
 </body>
 
@@ -103,7 +147,8 @@
 </script>
 
 <footer>
-    <p> Copyright</p>
+    <p>©2022</p>
+    <a href="https://github.com/falxala/ColorChart">falxala</a>
 </footer>
 
 </html>
