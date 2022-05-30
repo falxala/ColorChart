@@ -44,10 +44,10 @@
         }
 
         .gridbox1 {
-            padding-top: 5em;
+            padding-top:5em;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: 200px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-auto-rows: 7em;
             overflow-x: auto;
         }
 
@@ -55,7 +55,7 @@
             padding: 10px 10px;
             margin: 5px 5px;
             cursor: pointer;
-            font-size: 200%;
+            font-size: 2em;
             font-weight: bolder;
             color: white;
             text-shadow: 1px 1px 0 #000, -1px -1px 0 #000,
@@ -77,20 +77,25 @@
             width: 100%;
         }
 
-        /*
-        @media (max-width: 1000px) {
-            .gridbox1 {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        */
-        @media screen and (max-width:640px) {
-
+        @media screen and (min-width:480px) {
             .gridbox1 {
                 grid-template-columns: repeat(1, 1fr);
             }
         }
+
+        @media screen and (min-width:768px) and (max-width:1024px) {
+            .gridbox1 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (min-width:1024px) {
+            .gridbox1 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <header class="site-header">
     <div>
@@ -134,7 +139,7 @@
             <p id="code8" onclick="copyToClipboard(10)">#be4353</p>
         </div>
         <div style="background-color: #be4343;">
-            <p id="code8" onclick="copyToClipboard(10)">#be4353</p>
+            <p id="code8" onclick="copyToClipboard(10)">#be4343</p>
         </div>
     </div>
 </body>
